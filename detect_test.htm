@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+<div id="player"></div>
+
+<script>
+var isOperaMini = navigator.userAgent.indexOf('Opera Mini') > -1;
+var isIEMobile = navigator.userAgent.indexOf('IEMobile') > -1;
+
+var playerDiv = document.getElementById("player");
+
+if (isOperaMini) {
+    playerDiv.innerHTML =
+        '<video src="http://dl.mcopulos.com/vid/56k/awts_gege.flv" controls width="240"></video>';
+
+} else if (isIEMobile) {
+    playerDiv.innerHTML =
+        '<a href="http://dl.mcopulos.com/vid/56k/awts_gege.flv">Click here to view</a>';
+
+} else {
+    playerDiv.innerHTML =
+       	'<p align="center">' + 
+   		'<OBJECT id=player1 height=180 width=240 classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 name=allowfullscreen value="true" NAME="allowfullscreen" VALUE="true">' + 
+		'<PARAM NAME="allowscriptaccess" VALUE="always">' + 
+		'<PARAM NAME="flashvars" VALUE="file=http://dl.mcopulos.com/vid/56k/awts_gege.flv&amp;autostart=true">' + 
+		'<param name="movie" value="flash/player.swf">' + 
+		'<param name="quality" value="High">' + 
+		'<embed id="player1" name="player1" src="flash/player.swf" width="240" height="180" allowscriptaccess="always" allowfullscreen="true" flashvars="file=http://dl.mcopulos.com/vid/56k/awts_gege.flv&autostart=true" quality="High" /></OBJECT>' + 
+		'</p>'; 
+}
+</script></body>
+
+</html>
